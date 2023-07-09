@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2023-07-06 19:14:26.468469",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_name",
+  "member_address",
+  "column_break_ilov",
+  "member_email",
+  "member_mobile",
+  "section_break_kysc",
+  "membership_plan",
+  "column_break_bfxg",
+  "start_date",
+  "column_break_kvbg",
+  "end_date",
+  "section_break_meie",
+  "naming_series",
+  "column_break_pddh",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Name",
+   "options": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member_email",
+   "fieldtype": "Data",
+   "label": "Member Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "member_mobile",
+   "fieldtype": "Data",
+   "label": "Member Mobile",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "member_address",
+   "fieldtype": "Data",
+   "label": "Member Address"
+  },
+  {
+   "default": "Annual",
+   "fieldname": "membership_plan",
+   "fieldtype": "Link",
+   "label": "Membership Plan",
+   "options": "Gymasy Membership"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "MEM.-.####",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gymasy Member",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ilov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_meie",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_pddh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kysc",
+   "fieldtype": "Section Break",
+   "label": "Membership Details"
+  },
+  {
+   "fieldname": "column_break_bfxg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_kvbg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-07 09:37:26.902573",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gymasy Member",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "member_name",
+ "track_changes": 1
+}

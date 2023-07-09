@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-07 23:01:08.915622",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_name",
+  "status",
+  "locker_number",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "frappe.session.user_fullname",
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gymasy Locker Booking",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "locker_number",
+   "fieldtype": "Data",
+   "label": "Locker Number"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Locker Booking Status",
+   "options": "Requested\nProcessing\nAssigned"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-08 22:24:57.129382",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gymasy Locker Booking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "member_name",
+ "track_changes": 1,
+ "track_seen": 1
+}

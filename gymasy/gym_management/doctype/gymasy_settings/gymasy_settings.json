@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2023-07-04 18:36:23.389829",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "number_of_lockers",
+  "class_capacity",
+  "class_duration",
+  "lockers_list"
+ ],
+ "fields": [
+  {
+   "default": "200",
+   "fieldname": "number_of_lockers",
+   "fieldtype": "Int",
+   "label": "Number of Lockers"
+  },
+  {
+   "default": "35",
+   "fieldname": "class_capacity",
+   "fieldtype": "Int",
+   "label": "Class Capacity"
+  },
+  {
+   "default": "1h",
+   "fieldname": "class_duration",
+   "fieldtype": "Duration",
+   "label": "Class Duration"
+  },
+  {
+   "fieldname": "lockers_list",
+   "fieldtype": "JSON",
+   "hidden": 1,
+   "label": "Lockers List"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-07-07 13:05:45.979594",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gymasy Settings",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
