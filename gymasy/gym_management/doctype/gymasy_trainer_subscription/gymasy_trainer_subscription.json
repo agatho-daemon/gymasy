@@ -66,7 +66,6 @@
    "label": "Subscription Price",
    "non_negative": 1,
    "precision": "3",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -80,7 +79,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-13 21:46:23.083058",
+ "modified": "2023-07-13 23:35:17.696798",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Trainer Subscription",
@@ -99,6 +98,7 @@
    "write": 1
   }
  ],
+ "search_fields": "subscription_price",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
