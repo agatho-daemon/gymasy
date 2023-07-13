@@ -1,35 +1,38 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-07-09 20:30:43.018202",
+ "creation": "2023-07-12 19:56:54.525837",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "trainer_specialty",
-  "description"
+  "member_name",
+  "booking_class"
  ],
  "fields": [
   {
-   "fieldname": "trainer_specialty",
-   "fieldtype": "Data",
+   "default": "user_fullname",
+   "fieldname": "member_name",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Trainer Specialty",
+   "label": "Member Name",
+   "options": "Gymasy Member",
    "reqd": 1
   },
   {
-   "fieldname": "description",
-   "fieldtype": "Data",
-   "label": "Description"
+   "fieldname": "booking_class",
+   "fieldtype": "Table",
+   "label": "Booking Class",
+   "options": "Group Class Booking Item"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-09 20:33:40.815317",
+ "modified": "2023-07-12 20:00:51.142257",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gymasy Trainer Specialty",
+ "name": "Group Class Booking",
  "owner": "Administrator",
  "permissions": [
   {
@@ -45,9 +48,7 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "trainer_specialty"
+ "states": []
 }

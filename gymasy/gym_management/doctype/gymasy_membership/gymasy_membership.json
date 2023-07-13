@@ -17,28 +17,30 @@
   {
    "fieldname": "membership_plan_name",
    "fieldtype": "Data",
-   "label": "Memberrship Plan",
+   "label": "Membership Plan",
    "unique": 1
-  },
-  {
-   "fieldname": "membership_plan_price",
-   "fieldtype": "Currency",
-   "label": "Plan Price"
   },
   {
    "fieldname": "membership_plan_duration",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Plan Duration (in months)",
    "non_negative": 1
   },
   {
    "fieldname": "column_break_axhr",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "membership_plan_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Plan Price"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-06 22:29:54.982590",
+ "modified": "2023-07-13 11:15:53.175220",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Membership",
@@ -58,9 +60,7 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "membership_plan_name"
+ "states": []
 }

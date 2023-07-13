@@ -1,55 +1,48 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-07-07 23:01:08.915622",
+ "autoname": "field:plan_category",
+ "creation": "2023-07-12 19:27:28.839205",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "member_name",
-  "status",
-  "locker_number",
+  "plan_category",
+  "phase_table",
   "amended_from"
  ],
  "fields": [
   {
-   "default": "frappe.session.user_fullname",
-   "fieldname": "member_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Name",
-   "options": "Gymasy Member",
-   "reqd": 1
+   "fieldname": "plan_category",
+   "fieldtype": "Data",
+   "label": "Workout Plan Category",
+   "unique": 1
+  },
+  {
+   "fieldname": "phase_table",
+   "fieldtype": "Table",
+   "label": "Phase Table",
+   "options": "Gymasy Workout Plan Exercise"
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Gymasy Locker Booking",
+   "options": "Gymasy Workout Plan",
    "print_hide": 1,
    "read_only": 1
-  },
-  {
-   "fieldname": "locker_number",
-   "fieldtype": "Data",
-   "label": "Locker Number"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Locker Booking Status",
-   "options": "Requested\nProcessing\nAssigned"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-10 21:49:20.684644",
+ "modified": "2023-07-12 19:49:46.479083",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gymasy Locker Booking",
+ "name": "Gymasy Workout Plan",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -65,11 +58,8 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "member_name",
- "track_changes": 1,
- "track_seen": 1
+ "track_changes": 1
 }

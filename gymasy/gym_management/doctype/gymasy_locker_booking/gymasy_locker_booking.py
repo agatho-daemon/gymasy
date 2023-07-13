@@ -9,7 +9,7 @@ from frappe.model.document import Document
 
 class GymasyLockerBooking(Document):
 	# pass
-	def validate(self):
+	def on_submit(self):
 		
 		# Booking a locker
 		chosen_locker = self.locker_number
@@ -26,9 +26,10 @@ class GymasyLockerBooking(Document):
 		else:
 			the_lockers_list[chosen_locker] = 1
 			frappe.db.set_single_value("Gymasy Settings", "lockers_list", json.dumps(the_lockers_list))
+			self.status = "Assigned"
 			frappe.msgprint(f"Locker «{chosen_locker}» is booked successfully!")
-		
-	
+
+
 	def on_cancel(self):
 		# Canceling a locker booking
 		booked_locker = self.locker_number

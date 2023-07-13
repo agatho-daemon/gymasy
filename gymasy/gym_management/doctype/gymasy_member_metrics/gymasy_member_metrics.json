@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{member_name}-{metrics_entry_date}",
+ "creation": "2023-07-11 21:56:39.971217",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "metrics_entry_datetime",
+  "column_break_xuhl",
+  "section_break_tcfg",
+  "member_name",
+  "member_weight",
+  "waist_circumference",
+  "muscle_mass",
+  "daily_calorie_intake",
+  "column_break_xsjh",
+  "body_fat_percentage",
+  "progress_image",
+  "progress_photo"
+ ],
+ "fields": [
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Gymasy Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member_weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "body_fat_percentage",
+   "fieldtype": "Percent",
+   "label": "Body Fat Percentage"
+  },
+  {
+   "fieldname": "muscle_mass",
+   "fieldtype": "Float",
+   "label": "Muscle Mass"
+  },
+  {
+   "fieldname": "waist_circumference",
+   "fieldtype": "Float",
+   "label": "Waist Circumference"
+  },
+  {
+   "fieldname": "daily_calorie_intake",
+   "fieldtype": "Float",
+   "label": "Daily Calorie Intake"
+  },
+  {
+   "fieldname": "progress_photo",
+   "fieldtype": "Image",
+   "label": "Progress Photo",
+   "options": "progress_image"
+  },
+  {
+   "default": "Now",
+   "fieldname": "metrics_entry_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xuhl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tcfg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xsjh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "progress_image",
+   "fieldtype": "Attach Image",
+   "label": "Progress Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-12 18:48:44.065798",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gymasy Member Metrics",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

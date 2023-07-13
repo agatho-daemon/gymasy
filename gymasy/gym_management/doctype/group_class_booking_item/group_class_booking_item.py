@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class GymasyTrainerSpecialty(Document):
+class GroupClassBookingItem(Document):
 	pass

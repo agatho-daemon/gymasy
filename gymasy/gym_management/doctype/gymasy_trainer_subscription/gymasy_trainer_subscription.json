@@ -1,32 +1,24 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
- "creation": "2023-07-09 19:11:20.272443",
+ "creation": "2023-07-10 20:40:05.812727",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "trainer_specialty",
-  "column_break_qcgw",
+  "member_name",
+  "column_break_pjcx",
   "trainer_name",
-  "amended_from"
+  "subscription_price",
+  "section_break_whhy",
+  "start_date",
+  "amended_from",
+  "column_break_xlyj",
+  "end_date"
  ],
  "fields": [
-  {
-   "fieldname": "trainer_specialty",
-   "fieldtype": "Link",
-   "label": "Trainer Specialty",
-   "options": "Gymasy Trainer Specialty"
-  },
-  {
-   "default": "user_fullname",
-   "fieldname": "trainer_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Trainer Name",
-   "options": "Gymasy Trainer"
-  },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
@@ -37,14 +29,58 @@
    "read_only": 1
   },
   {
-   "fieldname": "column_break_qcgw",
+   "fieldname": "member_name",
+   "fieldtype": "Link",
+   "label": "Member Name",
+   "options": "Gymasy Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "options": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xlyj",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_pjcx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_whhy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "trainer_name.subscription_price",
+   "fieldname": "subscription_price",
+   "fieldtype": "Currency",
+   "label": "Subscription Price",
+   "non_negative": 1,
+   "precision": "3",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trainer Name",
+   "options": "Gymasy Trainer",
+   "reqd": 1
   }
  ],
- "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-09 21:01:59.796482",
+ "modified": "2023-07-13 21:46:23.083058",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Trainer Subscription",

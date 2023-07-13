@@ -1,5 +1,7 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:trainer_nickname",
  "creation": "2023-07-09 17:59:57.490727",
@@ -13,7 +15,10 @@
   "trainer_mobile",
   "column_break_ruef",
   "trainer_nickname",
-  "trainer_specialty"
+  "trainer_specialty",
+  "subscription_price",
+  "route",
+  "is_published"
  ],
  "fields": [
   {
@@ -28,18 +33,21 @@
    "fieldname": "trainer_email",
    "fieldtype": "Data",
    "label": "Email",
-   "options": "Email"
+   "options": "Email",
+   "reqd": 1
   },
   {
    "fieldname": "trainer_mobile",
    "fieldtype": "Data",
    "label": "Mobile",
-   "options": "Phone"
+   "options": "Phone",
+   "reqd": 1
   },
   {
    "fieldname": "trainer_nickname",
    "fieldtype": "Data",
    "label": "Nickname",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -48,18 +56,40 @@
   },
   {
    "fieldname": "trainer_specialty",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_filter": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Specialty",
-   "options": "Gymasy Trainer Specialty",
+   "reqd": 1,
    "sort_options": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Published?"
+  },
+  {
+   "fieldname": "subscription_price",
+   "fieldtype": "Currency",
+   "label": "Subscription Price",
+   "non_negative": 1,
+   "precision": "3",
+   "reqd": 1
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2023-07-09 20:34:20.632103",
+ "modified": "2023-07-13 21:37:30.077031",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Trainer",
@@ -79,10 +109,9 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
+ "route": "trainers",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "trainer_nickname",
  "track_changes": 1
 }

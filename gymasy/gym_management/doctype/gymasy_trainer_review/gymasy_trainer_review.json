@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:trainer_name",
+ "creation": "2023-07-10 20:47:48.998002",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_name",
+  "trainer_name",
+  "trainer_rating",
+  "amended_from",
+  "column_break_hnon",
+  "trainer_review"
+ ],
+ "fields": [
+  {
+   "fieldname": "trainer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trainer Name",
+   "options": "Gymasy Trainer",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "trainer_review",
+   "fieldtype": "Text",
+   "label": "Review"
+  },
+  {
+   "fieldname": "trainer_rating",
+   "fieldtype": "Rating",
+   "label": "Trainer Rating"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gymasy Trainer Review",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "user_fullname",
+   "fieldname": "member_name",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Member Name",
+   "options": "Gymasy Member",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hnon",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-12 18:59:17.163963",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gymasy Trainer Review",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

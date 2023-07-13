@@ -15,10 +15,20 @@
   "member_mobile",
   "section_break_kysc",
   "membership_plan",
+  "membership_plan_price",
   "column_break_bfxg",
   "start_date",
   "column_break_kvbg",
   "end_date",
+  "section_break_qxtm",
+  "muscle_mass",
+  "waist_circumference",
+  "member_weight",
+  "daily_calorie_intake",
+  "body_fat_percentage",
+  "column_break_oyau",
+  "progress_image",
+  "progress_photo",
   "section_break_meie",
   "naming_series",
   "column_break_pddh",
@@ -111,12 +121,75 @@
    "in_list_view": 1,
    "label": "End Date",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_qxtm",
+   "fieldtype": "Section Break",
+   "label": "Initial Metrics"
+  },
+  {
+   "fieldname": "muscle_mass",
+   "fieldtype": "Float",
+   "label": "Muscle Mass",
+   "non_negative": 1,
+   "precision": "3"
+  },
+  {
+   "fieldname": "waist_circumference",
+   "fieldtype": "Float",
+   "label": "Waist Circumference",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "member_weight",
+   "fieldtype": "Float",
+   "label": "Weight",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "daily_calorie_intake",
+   "fieldtype": "Float",
+   "label": "Daily Calorie Intake",
+   "non_negative": 1,
+   "precision": "3"
+  },
+  {
+   "fieldname": "column_break_oyau",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "body_fat_percentage",
+   "fieldtype": "Percent",
+   "label": "Body Fat Percentage",
+   "precision": "2"
+  },
+  {
+   "fieldname": "progress_photo",
+   "fieldtype": "Image",
+   "label": "Progress Photo",
+   "options": "progress_image"
+  },
+  {
+   "fieldname": "progress_image",
+   "fieldtype": "Attach Image",
+   "label": "Progress Image"
+  },
+  {
+   "fetch_from": "membership_plan.membership_plan_price",
+   "fieldname": "membership_plan_price",
+   "fieldtype": "Currency",
+   "label": "Membership Price",
+   "non_negative": 1,
+   "precision": "3",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-07 09:37:26.902573",
+ "modified": "2023-07-13 11:16:33.631104",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Member",

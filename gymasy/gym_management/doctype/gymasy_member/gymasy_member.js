@@ -17,6 +17,10 @@ frappe.ui.form.on("Gymasy Member", {
             ending = frappe.datetime.add_days(ending, -1);
             frm.set_value('end_date', ending);
         });
+        planPrice = frappe.db.get_value('Gymasy Membership', planName, 'membership_plan_price')
+        .then(r => {
+            frm.set_value('membership_plan_price', r.message.membership_plan_price);
+        });
     },
     start_date(frm) {
         if(frm.doc.start_date < frappe.datetime.get_today()) {
