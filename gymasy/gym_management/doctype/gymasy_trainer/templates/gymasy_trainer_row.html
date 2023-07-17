@@ -5,7 +5,7 @@
 		<h5 class="card-title">{{ doc.trainer_nickname }}</h5>
 	  	<h6 class="card-subtitle mb-2 text-body-secondary">{{ doc.trainer_name }}</h6>
 		<p class="card-text">Specialty: {{ doc.trainer_specialty }}.</p>
-		<a href="/trainer-subscription/new?trainer_name={{ doc.name }}" class="card-link">Subscribe</a>
+		<a href="{{ doc.route }}" class="card-link">View Trainer Page</a>
 	</div>
 </div>
 </div>

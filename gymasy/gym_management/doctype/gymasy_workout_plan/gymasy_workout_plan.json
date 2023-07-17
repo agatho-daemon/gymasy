@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "field:plan_category",
  "creation": "2023-07-12 19:27:28.839205",
@@ -9,8 +10,14 @@
  "engine": "InnoDB",
  "field_order": [
   "plan_category",
+  "column_break_qssq",
+  "exercises_section",
   "phase_table",
-  "amended_from"
+  "section_break_zcrx",
+  "route",
+  "amended_from",
+  "column_break_wrpf",
+  "is_published"
  ],
  "fields": [
   {
@@ -22,7 +29,7 @@
   {
    "fieldname": "phase_table",
    "fieldtype": "Table",
-   "label": "Phase Table",
+   "label": "Phase & Exercises",
    "options": "Gymasy Workout Plan Exercise"
   },
   {
@@ -33,12 +40,42 @@
    "options": "Gymasy Workout Plan",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Route",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Published?"
+  },
+  {
+   "fieldname": "column_break_qssq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exercises_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_zcrx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wrpf",
+   "fieldtype": "Column Break"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2023-07-12 19:49:46.479083",
+ "modified": "2023-07-17 18:23:29.321092",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Workout Plan",
@@ -58,6 +95,7 @@
    "write": 1
   }
  ],
+ "route": "workout-plans",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

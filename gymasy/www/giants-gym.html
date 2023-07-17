@@ -1,0 +1,56 @@
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> -->
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="container">
+    <div style="margin-bottom: 5rem;">
+        <h3>Giants Gym
+            <small class="text-body-secondary">Body Buidling Arts</small>
+        </h3>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col mb-3">
+            <div class="card h-100" style="width: 18rem;">
+                <img src="/private/files/workoutplans.jpg" class="card-img-top" alt="Workout Plans">
+                <div class="card-body">
+                    <h5 class="card-title">Giants Workout Plans</h5>
+                    <p class="card-text">We pick our workout plans carefuly to suit all levels. They are updated
+                        periodically.</p>
+                    <a href="/workout-plans" class="btn">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-3">
+            <div class="card h-100" style="width: 18rem;">
+                <img src="/private/files/trainers.webp" class="card-img-top" alt="Trainers">
+                <div class="card-body">
+                    <h5 class="card-title">Giant's Trainers</h5>
+                    <p class="card-text">Hand picked to help you achieve your goals.</p>
+                    <a href="/trainers" class="btn">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-3">
+            <div class="card h-100" style="width: 18rem;">
+                <img src="/private/files/groupc.jpeg" class="card-img-top" alt="Group Classes">
+                <div class="card-body">
+                    <h5 class="card-title">Group Classes</h5>
+                    <p class="card-text">Carefully crafted around your body needs. At a flat KWD 30 Rate!</p>
+                    <a href="/book-a-class/new" class="btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-3">
+            <div class="card h-100" style="width: 18rem;">
+                <img src="/private/files/lockers.jpg" class="card-img-top" alt="Book A Locker">
+                <div class="card-body">
+                    <h5 class="card-title">Members Locker Booking</h5>
+                    <p class="card-text">We have limited number of lockers, hurry-up, book yours.</p>
+                    <a href="/locker-booking-request" class="btn">Book A Locker</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

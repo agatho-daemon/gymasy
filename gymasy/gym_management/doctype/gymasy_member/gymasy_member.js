@@ -24,7 +24,7 @@ frappe.ui.form.on("Gymasy Member", {
     },
     start_date(frm) {
         if(frm.doc.start_date < frappe.datetime.get_today()) {
-            frappe.msgprint(__("Can not select a date in the past!"));
+            frappe.msgprint(__("Cannot select a date in the past!"));
             frappe.validated = false;
         } else {
             planName = frm.get_field('membership_plan').value;

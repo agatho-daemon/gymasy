@@ -1,8 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:trainer_name",
- "creation": "2023-07-10 20:47:48.998002",
+ "autoname": "format:{member_name}-{trainer_name}",
+ "creation": "2023-07-14 17:49:18.794002",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -13,26 +13,28 @@
   "trainer_rating",
   "amended_from",
   "column_break_hnon",
-  "trainer_review"
+  "trainer_review",
+  "route",
+  "is_published"
  ],
  "fields": [
   {
    "fieldname": "trainer_name",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Trainer Name",
    "options": "Gymasy Trainer",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "trainer_review",
    "fieldtype": "Text",
+   "in_list_view": 1,
    "label": "Review"
   },
   {
    "fieldname": "trainer_rating",
    "fieldtype": "Rating",
+   "in_list_view": 1,
    "label": "Trainer Rating"
   },
   {
@@ -45,28 +47,38 @@
    "read_only": 1
   },
   {
-   "default": "user_fullname",
    "fieldname": "member_name",
    "fieldtype": "Link",
-   "hidden": 1,
+   "in_list_view": 1,
    "label": "Member Name",
    "options": "Gymasy Member",
-   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "column_break_hnon",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Published?"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-07-12 18:59:17.163963",
+ "modified": "2023-07-14 20:36:12.034439",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Trainer Review",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

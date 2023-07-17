@@ -1,9 +1,16 @@
 # Copyright (c) 2023, Ismail Tabtabai and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
 
 
 class GroupClassBooking(Document):
-	pass
+
+	def validate(self):
+		pass
+		# frappe.
+		
+		# bookings = self.booking_class
+
+		# for abooking in bookings:

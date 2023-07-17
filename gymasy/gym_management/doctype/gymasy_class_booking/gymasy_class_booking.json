@@ -1,16 +1,18 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:member_name",
- "creation": "2023-07-12 19:56:54.525837",
+ "autoname": "format:{member_name}-{booking_date}",
+ "creation": "2023-07-17 15:42:18.295949",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "member_name",
-  "booking_class",
-  "amended_from"
+  "booking_date",
+  "group_class",
+  "amended_from",
+  "class_price"
  ],
  "fields": [
   {
@@ -19,33 +21,49 @@
    "in_list_view": 1,
    "label": "Member Name",
    "options": "Gymasy Member",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
-   "fieldname": "booking_class",
-   "fieldtype": "Table",
-   "label": "Booking Class",
-   "options": "Group Class Booking Item"
+   "default": "Today",
+   "fieldname": "booking_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Booking Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "group_class",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Group Class",
+   "options": "Zumba\nYoga\nPilates\nStep Aerobics",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Group Class Booking",
+   "options": "Gymasy Class Booking",
    "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "30",
+   "fieldname": "class_price",
+   "fieldtype": "Currency",
+   "label": "Class Price",
    "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-16 15:43:12.097062",
+ "modified": "2023-07-17 15:46:50.969568",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Group Class Booking",
- "naming_rule": "By fieldname",
+ "name": "Gymasy Class Booking",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -63,5 +81,8 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

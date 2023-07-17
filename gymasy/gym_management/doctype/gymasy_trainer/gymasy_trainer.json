@@ -18,7 +18,9 @@
   "trainer_specialty",
   "subscription_price",
   "route",
-  "is_published"
+  "is_published",
+  "trainer_photo",
+  "trainer_rating"
  ],
  "fields": [
   {
@@ -83,13 +85,26 @@
    "non_negative": 1,
    "precision": "3",
    "reqd": 1
+  },
+  {
+   "fieldname": "trainer_photo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Trainer Photo"
+  },
+  {
+   "fieldname": "trainer_rating",
+   "fieldtype": "Link",
+   "label": "Trainer Rating",
+   "options": "Gymasy Trainer Review"
   }
  ],
  "has_web_view": 1,
+ "image_field": "trainer_photo",
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2023-07-13 21:37:30.077031",
+ "modified": "2023-07-14 10:03:29.918959",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Trainer",
