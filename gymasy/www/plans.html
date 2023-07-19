@@ -1,0 +1,30 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div>
+    <h4 class="display-4">Workout Plans</h4>
+    {% for cat in categories %}
+    <h5 class="display-5  mt-18">{{ cat.plan_category }}</h5>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="w-25" scope="col">Phase</th>
+                <th scope="col">Exercise</th>
+          </tr>
+        </thead>
+        <tbody>
+                {% for plan in plan_details %}
+            <tr>
+                    {% if plan.parent == cat.name %}
+                        <td>{{ plan.workout_plan_phase }}</td>
+                        <td>{{ plan.workout_plan_phase_exercise }}</td>
+                    {% endif %}
+            </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+    {% endfor %}
+</div>
+{% endblock %}
+
+  

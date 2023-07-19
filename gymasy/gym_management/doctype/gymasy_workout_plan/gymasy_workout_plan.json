@@ -1,8 +1,7 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "field:plan_category",
+ "autoname": "format:{##}-{plan_category}",
  "creation": "2023-07-12 19:27:28.839205",
  "default_view": "List",
  "doctype": "DocType",
@@ -14,10 +13,8 @@
   "exercises_section",
   "phase_table",
   "section_break_zcrx",
-  "route",
   "amended_from",
-  "column_break_wrpf",
-  "is_published"
+  "column_break_wrpf"
  ],
  "fields": [
   {
@@ -42,19 +39,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "route",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Route",
-   "reqd": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "is_published",
-   "fieldtype": "Check",
-   "label": "Published?"
-  },
-  {
    "fieldname": "column_break_qssq",
    "fieldtype": "Column Break"
   },
@@ -71,15 +55,13 @@
    "fieldtype": "Column Break"
   }
  ],
- "has_web_view": 1,
  "index_web_pages_for_search": 1,
- "is_published_field": "is_published",
  "links": [],
- "modified": "2023-07-17 18:23:29.321092",
+ "modified": "2023-07-19 17:24:54.887462",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Workout Plan",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -95,7 +77,6 @@
    "write": 1
   }
  ],
- "route": "workout-plans",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

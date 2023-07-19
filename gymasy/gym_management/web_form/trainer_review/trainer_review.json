@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-07-14 20:53:14.984574",
+ "modified": "2023-07-18 02:09:14.005635",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "trainer-review",
@@ -42,7 +42,7 @@
    "max_length": 0,
    "max_value": 0,
    "options": "Gymasy Member",
-   "read_only": 1,
+   "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
   },
@@ -55,7 +55,7 @@
    "max_length": 0,
    "max_value": 0,
    "options": "Gymasy Trainer",
-   "read_only": 1,
+   "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
   },
