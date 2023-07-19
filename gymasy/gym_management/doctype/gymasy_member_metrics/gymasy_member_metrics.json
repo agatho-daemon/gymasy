@@ -89,7 +89,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-12 18:48:44.065798",
+ "modified": "2023-07-19 19:00:01.047035",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Member Metrics",
@@ -105,6 +105,30 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gymasy Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gymasy Trainer",
    "share": 1,
    "write": 1
   }

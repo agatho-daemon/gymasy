@@ -57,7 +57,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-19 17:24:54.887462",
+ "modified": "2023-07-19 18:55:47.305838",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Workout Plan",
@@ -73,6 +73,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gymasy Admin",
    "share": 1,
    "write": 1
   }
