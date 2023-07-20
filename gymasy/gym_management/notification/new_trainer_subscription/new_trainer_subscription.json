@@ -1,0 +1,31 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2023-07-20 10:28:14.452881",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Gymasy Trainer Subscription",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<h3>{{ doc.name }} Submitted a New Trainer Subscription</h3>",
+ "modified": "2023-07-20 11:19:54.427090",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "New Trainer Subscription",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "",
+   "receiver_by_role": "Gymasy Admin"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 1,
+ "sender": "Gymasy Admin",
+ "sender_email": "itabtabai@gmail.com",
+ "subject": "A Trainer Subscription is Created"
+}

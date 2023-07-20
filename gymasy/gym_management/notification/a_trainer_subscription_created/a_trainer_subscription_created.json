@@ -1,0 +1,27 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "creation": "2023-07-20 10:55:18.792222",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Gymasy Trainer Subscription",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Add your message here",
+ "modified": "2023-07-20 10:55:18.792222",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "A Trainer Subscription Created",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Trainer Subscription Created by {{ doc.name }}"
+}
