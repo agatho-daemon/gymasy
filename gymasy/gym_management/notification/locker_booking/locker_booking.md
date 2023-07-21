@@ -1,0 +1,1 @@
+<h4>{{ doc.name }} has placed request to book a locker.</h4>

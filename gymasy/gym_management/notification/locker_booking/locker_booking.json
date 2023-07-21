@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2023-07-20 11:43:53.745417",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Gymasy Locker Booking",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<h4>{{ doc.name }} has placed request to book a locker.</h4>",
+ "modified": "2023-07-20 11:43:53.745417",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Locker Booking",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "Gymasy Admin"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "Gymasy Admin",
+ "sender_email": "itabtabai@gmail.com",
+ "subject": "A New Locker Booked"
+}
