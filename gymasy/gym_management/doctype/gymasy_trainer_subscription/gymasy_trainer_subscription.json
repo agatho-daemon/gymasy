@@ -2,6 +2,7 @@
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_rename": 1,
+ "autoname": "format:{member_name}-{MM}-{YYYY}",
  "creation": "2023-07-10 20:40:05.812727",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,12 +12,9 @@
   "member_name",
   "column_break_pjcx",
   "trainer_name",
-  "subscription_price",
   "section_break_whhy",
-  "start_date",
-  "amended_from",
-  "column_break_xlyj",
-  "end_date"
+  "subscription_date",
+  "amended_from"
  ],
  "fields": [
   {
@@ -36,22 +34,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Start Date",
-   "options": "Today",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_xlyj",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Date",
-   "label": "End Date"
-  },
-  {
    "fieldname": "column_break_pjcx",
    "fieldtype": "Column Break"
   },
@@ -60,29 +42,27 @@
    "fieldtype": "Section Break"
   },
   {
-   "fetch_from": "trainer_name.subscription_price",
-   "fieldname": "subscription_price",
-   "fieldtype": "Currency",
-   "label": "Subscription Price",
-   "non_negative": 1,
-   "precision": "3",
-   "reqd": 1
-  },
-  {
    "fieldname": "trainer_name",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Trainer Name",
    "options": "Gymasy Trainer",
    "reqd": 1
+  },
+  {
+   "fieldname": "subscription_date",
+   "fieldtype": "Date",
+   "label": "Subscription Date",
+   "options": "Today",
+   "reqd": 1
   }
  ],
- "is_submittable": 1,
  "links": [],
- "modified": "2023-07-19 19:00:29.292370",
+ "modified": "2023-07-26 11:39:46.373637",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Trainer Subscription",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -110,7 +90,6 @@
    "write": 1
   }
  ],
- "search_fields": "subscription_price",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

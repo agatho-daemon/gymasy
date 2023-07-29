@@ -16,7 +16,6 @@
   "column_break_ruef",
   "trainer_nickname",
   "trainer_specialty",
-  "subscription_price",
   "route",
   "is_published",
   "trainer_photo",
@@ -79,14 +78,6 @@
    "label": "Published?"
   },
   {
-   "fieldname": "subscription_price",
-   "fieldtype": "Currency",
-   "label": "Subscription Price",
-   "non_negative": 1,
-   "precision": "3",
-   "reqd": 1
-  },
-  {
    "fieldname": "trainer_photo",
    "fieldtype": "Attach Image",
    "hidden": 1,
@@ -104,7 +95,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2023-07-19 18:58:51.945105",
+ "modified": "2023-07-26 11:41:18.919689",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Trainer",

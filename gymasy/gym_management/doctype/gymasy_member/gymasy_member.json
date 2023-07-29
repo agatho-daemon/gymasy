@@ -33,7 +33,7 @@
   "naming_series",
   "column_break_pddh",
   "amended_from",
-  "member_rating"
+  "current_trainer"
  ],
  "fields": [
   {
@@ -187,16 +187,15 @@
    "read_only": 1
   },
   {
-   "fieldname": "member_rating",
-   "fieldtype": "Link",
-   "label": "Member Rating",
-   "options": "Gymasy Trainer Review"
+   "fieldname": "current_trainer",
+   "fieldtype": "Data",
+   "label": "Current Trainer"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-19 18:55:22.956591",
+ "modified": "2023-07-24 18:16:05.904684",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Member",

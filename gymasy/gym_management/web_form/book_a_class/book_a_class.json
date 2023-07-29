@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-07-17 15:47:42.772092",
+ "modified": "2023-07-26 11:42:22.210936",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "book-a-class",
@@ -69,19 +69,6 @@
    "options": "Zumba\nYoga\nPilates\nStep Aerobics",
    "read_only": 0,
    "reqd": 1,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "default": "30",
-   "fieldname": "class_price",
-   "fieldtype": "Currency",
-   "hidden": 0,
-   "label": "Class Price (flat rate)",
-   "max_length": 0,
-   "max_value": 0,
-   "read_only": 1,
-   "reqd": 0,
    "show_in_filter": 0
   }
  ]
