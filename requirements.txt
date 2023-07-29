@@ -1,2 +1,2 @@
 # frappe -- https://github.com/frappe/frappe is installed via 'bench init'
-pendulum == 2.1.2
+# pendulum == 2.1.2

@@ -1,0 +1,16 @@
+{% extends "templates/web.html" %}
+<script>
+    frappe.call({
+    method: "frappe.client.get_list",
+    args: {
+        doctype: "Gymasy Member",
+    }
+}).then((r) => {
+    console.log(r.message);
+});
+</script>
+{% block page_content %}
+<div>
+    <h2>Member Profile Page</h2>
+</div>
+{% endblock %}
