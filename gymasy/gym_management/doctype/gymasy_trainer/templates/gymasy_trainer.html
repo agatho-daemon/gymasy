@@ -3,8 +3,10 @@
 {% block page_content %}
 <h1>{{ title }}</h1>
 <img src="{{ doc.trainer_photo}}"><br>
-<a href="/trainer-subscription/new?trainer_name={{ doc.name }}&member_name={{ frappe.session.user }}" class="card-link">Subscribe</a>
-<a href="/trainer-review/new?trainer_name={{ doc.name }}&member_name={{ frappe.session.user }}" class="card-link">Rate/Review</a>
+<!-- <a href="/trainer-subscription/new?trainer_name={{ doc.name }}&member_name={{ frappe.session.user }}" class="card-link">Subscribe</a>
+<a href="/trainer-review/new?trainer_name={{ doc.name }}&member_name={{ frappe.session.user }}" class="card-link">Rate/Review</a> -->
+<a href="/trainer-subscription/new?trainer_name={{ doc.name }}" class="card-link">Subscribe</a>
+<a href="/trainer-review/new?trainer_name={{ doc.name }}" class="card-link">Rate/Review</a>
 {% endblock %}
 
 <!-- this is a sample default web page template -->
