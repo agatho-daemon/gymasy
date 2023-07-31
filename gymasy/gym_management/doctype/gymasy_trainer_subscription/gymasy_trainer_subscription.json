@@ -58,7 +58,7 @@
   }
  ],
  "links": [],
- "modified": "2023-07-26 11:39:46.373637",
+ "modified": "2023-07-31 02:38:49.887489",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Trainer Subscription",
@@ -86,6 +86,18 @@
    "read": 1,
    "report": 1,
    "role": "Gymasy Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gymasy Member",
    "share": 1,
    "write": 1
   }

@@ -3,5 +3,16 @@
 {% block page_content %}
 <div>
     <h2>Member Profile Page</h2>
+    <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+        <option selected>Select Member</option>
+        {% for (i, member) in enumerate(members, start=1) %}
+            <option value="{{ i }}">{{ member.name }}</option>
+        {% endfor %}
+      </select>
+    {% for member in members %}
+      <p>{{ member.name }}</p>
+    {% endfor %}
+    <p>Hello!</p>
+    <p>{{ members }}</p>
 </div>
 {% endblock %}
