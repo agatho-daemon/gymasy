@@ -22,13 +22,14 @@
    "fieldname": "lockers_list",
    "fieldtype": "JSON",
    "hidden": 1,
-   "label": "Lockers List"
+   "label": "Lockers List",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-07-19 18:58:14.690627",
+ "modified": "2023-08-04 13:48:19.282557",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Settings",

@@ -2,69 +2,39 @@
 # For license information, please see license.txt
 
 import frappe
-import json
 
 from frappe.model.document import Document
 
 
 class GymasyLockerBooking(Document):
 	# pass
-	def on_submit(self):
+	def validate(self):
 		
-		# Booking a locker
-		chosen_locker = self.locker_number
-
-		# Early on check if chosen locker is with in range of installed lockers
-		# Good case for testing!!!
-		if chosen_locker > frappe.db.get_single_value("Gymasy Settings", "number_of_lockers"):
+		# Check if locker booking limit reached.
+		available_lockers = frappe.db.get_single_value("Gymasy Settings", "number_of_lockers")
+		booked_lockers = frappe.db.count("Gymasy Locker Booking",
+				   filters = {
+					   "status": "Requested",
+					   "status": "Processing",
+					   "status": "Assigned"
+					   })
+		if booked_lockers >= available_lockers:
 			frappe.throw(
 				title = "Error",
-				msg = f"Locker «{chosen_locker}» does not exist. Please choose another locker."
+				msg = "Locker booking limit reached. Extra lockers must be installed."
 			)
+
+		# Check if member has already booked a locker
+		for locker in frappe.db.get_all("Gymasy Locker Booking", filters = {"member_name": self.member_name}):
+			if locker.member_name == self.member_name:
+				frappe.throw(
+					title = "Error",
+					msg = f"Member «{self.member_name}» has already booked a locker. Please cancel the current booking first."
+				)
 		
-		# Proceed with booking
-
-		# Format the locker number to 3 digits
-		chosen_locker = f'{chosen_locker:03}'
-
-		the_lockers_list = frappe.db.get_single_value("Gymasy Settings", "lockers_list")
-
-		the_lockers_list = json.loads(the_lockers_list)
-
-		if the_lockers_list[chosen_locker] != "free":
-			frappe.throw(
-				title = "Error",
-				msg = f"Locker «{chosen_locker}» is already booked. Please choose another locker."
-			)
-		else:
-			the_lockers_list[chosen_locker] = self.member_name
-			frappe.db.set_single_value("Gymasy Settings", "lockers_list", json.dumps(the_lockers_list))
-			frappe.db.set_value("Gymasy Member", self.member_name, "locker_number", chosen_locker)
-			self.status = "Assigned"
-			frappe.msgprint(f'Locker «{chosen_locker}» is booked successfully!')
+		# Otherwise just save request for submission
 
 
-	def on_trash(self):
-		# Another perfect testing case!!!
-		# Deleting a locker booking
-		booked_locker = self.locker_number
-
-		the_lockers_list = frappe.db.get_single_value("Gymasy Settings", "lockers_list")
-
-		the_lockers_list = json.loads(the_lockers_list)
-
-		if the_lockers_list[booked_locker] == self.member_name:
-			the_lockers_list[booked_locker] = "free"
-			frappe.db.set_single_value("Gymasy Settings", "lockers_list", json.dumps(the_lockers_list))
-			frappe.db.set_value("Gymasy Member", self.member_name, "locker_number", "free")
-			frappe.msgprint(f"Locker «{booked_locker}» is canceled successfully! Advise the member to remove his/her belongings from the locker.")
-		elif the_lockers_list[booked_locker] != self.member_name:
-			frappe.throw(
-				title = "Error",
-				msg = f"Locker «{booked_locker}» does not belong to member! Check with developer to fix this issue!"
-			)
-		else:
-			frappe.throw(
-				title = "Error",
-				msg = f"Locker «{booked_locker}» is a free locker! Check with developer to fix this issue!"
-			)
+	def on_cancel(self):
+		frappe.db.set_value('Gymasy Locker Booking', self.name, 'status', 'Canceled')
+		frappe.msgprint("Locker canceled successfully! Advise the member to remove their belongings from the locker.")
