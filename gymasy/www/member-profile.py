@@ -6,7 +6,11 @@
 import frappe
 
 def get_context(context):
-    members = frappe.get_list("Gymasy Member", order_by="name asc")
+    members = frappe.get_list(
+        "Gymasy Member",
+        fields=['name', 'member_name', 'membership_plan', 'end_date', 'current_trainer'],
+        order_by="name asc")
+    
     context.members = members
 
     test_member = "Gymasy Member-00001"

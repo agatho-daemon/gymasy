@@ -1,6 +1,7 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
+{{ include_style('file_uploader.bundle.js') }}
 <div>
     <h2>Member Profile Page</h2>
     <div>
@@ -15,6 +16,9 @@
       <p>{{ member.name }}</p>
     {% endfor %}
     <p>Hello!</p>
-    <p>{{ members }}</p>
+    <p>{{ test_member }}</p>
+    {% for member in members %}
+      <p>{{ print(member.name) }}</p>
+    {% endfor %}
 </div>
 {% endblock %}
