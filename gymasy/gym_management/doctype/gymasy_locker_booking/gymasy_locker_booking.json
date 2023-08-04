@@ -35,7 +35,8 @@
    "fieldname": "locker_number",
    "fieldtype": "Int",
    "label": "Locker Number",
-   "non_negative": 1
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "status",
@@ -47,7 +48,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-04 20:20:01.546661",
+ "modified": "2023-08-04 21:31:58.007090",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Locker Booking",

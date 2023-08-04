@@ -36,5 +36,6 @@ class GymasyLockerBooking(Document):
 
 
 	def on_cancel(self):
+		frappe.db.set_value('Gymasy Locker Booking', self.name, 'locker_number', 0)
 		frappe.db.set_value('Gymasy Locker Booking', self.name, 'status', 'Canceled')
 		frappe.msgprint("Locker canceled successfully! Advise the member to remove their belongings from the locker.")
