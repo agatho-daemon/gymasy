@@ -8,9 +8,10 @@ from frappe.model.document import Document
 
 class GymasySettings(Document):
 	def validate(self):
-		# Testing case!!!
-		if self.number_of_lockers < len(self.lockers_list):
+		available_lockers = frappe.db.get_single_value("Gymasy Settings", "number_of_lockers")
+
+		if self.number_of_lockers < available_lockers:
 			frappe.throw(
 				title = "Error",
-				msg = "It seems the Gym is reducing the number of lockers. Please contact the developer to do the necessary adjustments."
+				msg = "It seems the gym is downgrading. Contact the developer to do the necessary adjustments."
 			)
