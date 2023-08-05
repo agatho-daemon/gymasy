@@ -104,15 +104,15 @@ def execute(filters=None):
 		'showLegend': 1
 	}
 
-	report_summary = [
-		{
-			'indicator': 'reduction',
-			'indicator': 'Green',
-			'label': 'Metrics',
-			'datatype': 'Percent'
-		}
-	]
+	# report_summary = [
+	# 	{
+	# 		'indicator': 'reduction',
+	# 		'indicator': 'Green',
+	# 		'label': 'Metrics',
+	# 		'datatype': 'Percent'
+	# 	}
+	# ]
 
 
 
-	return columns, data, None, chart, report_summary
+	return columns, data, None, chart#, report_summary

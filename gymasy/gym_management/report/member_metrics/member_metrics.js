@@ -15,11 +15,11 @@ frappe.query_reports["Member Metrics"] = {
 			label: __('Metric'),
 			fieldtype: 'Select',
 			options: [
-				'Weight',
-				'Waist',
-				'Muscle Mass',
-				'Body Fat %',
-				'Daily Calorie Intake (Kcal)'
+				'member_weight',
+				'waist_circumference',
+				'muscle_mass',
+				'body_fat_percentage',
+				'daily_calorie_intake'
 			],
 			default: 'Metrics'
 		}
