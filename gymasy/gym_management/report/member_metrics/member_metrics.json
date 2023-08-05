@@ -43,13 +43,21 @@
    "label": "Member",
    "mandatory": 1,
    "wildcard_filter": 0
+  },
+  {
+   "fieldname": "metrics",
+   "fieldtype": "Select",
+   "label": "Metrics",
+   "mandatory": 1,
+   "options": "Weight (Kg)\nWaist (cm)\nMuscle Mass (Kg)\nBody Fat %",
+   "wildcard_filter": 0
   }
  ],
  "idx": 0,
  "is_standard": "Yes",
  "json": "{}",
  "letterhead": null,
- "modified": "2023-08-05 15:06:24.264870",
+ "modified": "2023-08-05 22:05:18.712962",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Member Metrics",

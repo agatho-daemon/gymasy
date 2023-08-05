@@ -7,7 +7,8 @@ frappe.query_reports["Member Metrics"] = {
 			fieldname: 'member_name',
 			label: __('Member Name'),
 			fieldtype: 'Link',
-			options: 'Gymasy Member'
+			options: 'Gymasy Member',
+			'default': 'Gymasy Member'
 		},
 		{
 			fieldname: 'Metric',
@@ -19,7 +20,8 @@ frappe.query_reports["Member Metrics"] = {
 				'Muscle Mass',
 				'Body Fat %',
 				'Daily Calorie Intake (Kcal)'
-			]
+			],
+			default: 'Metrics'
 		}
 	]
 };
