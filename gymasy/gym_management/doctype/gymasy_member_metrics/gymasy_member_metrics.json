@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{member_name}-{metrics_entry_datetime}",
+ "autoname": "format:{member_name}-{entry_date}",
  "creation": "2023-07-11 21:56:39.971217",
  "default_view": "List",
  "doctype": "DocType",
@@ -92,7 +92,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-05 19:00:08.401093",
+ "modified": "2023-08-05 21:13:30.764990",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Member Metrics",
