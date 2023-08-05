@@ -1,0 +1,40 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<!-- 
+Profile info:
+1. Active Plan
+2. Remaining days in the subscription 
+3. Allocated Trainer (with contact info) Past Plans
+-->
+<div>
+    <h2>Members Profile</h2>
+    <select class="custom-select custom-select-lg mb-3" aria-label="Members">
+        <option selected>Select Member</option>
+        {% for member in members %}
+        <option value="{{ loop.index }}">{{ member.name }}</option>
+        {% endfor %}
+    </select>
+    <table class="table mt-10">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Active Plan</th>
+            <th scope="col">Days for Subscription</th>
+            <th scope="col">Current Trainer</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for member in members %}
+            <tr>
+                <th scope="row">{{ loop.index }}</th>
+                <td>{{ member.membership_plan }}</td>
+                <td>{{ member.end_date }}</td>
+                <td>{{ member.current_trainer }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock %}
