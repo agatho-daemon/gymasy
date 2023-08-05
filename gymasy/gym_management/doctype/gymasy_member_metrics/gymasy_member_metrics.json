@@ -8,7 +8,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "metrics_entry_datetime",
+  "entry_date",
   "column_break_xuhl",
   "section_break_tcfg",
   "member_name",
@@ -54,22 +54,15 @@
   },
   {
    "fieldname": "daily_calorie_intake",
-   "fieldtype": "Float",
-   "label": "Daily Calorie Intake"
+   "fieldtype": "Int",
+   "label": "Daily Calorie Intake",
+   "non_negative": 1
   },
   {
    "fieldname": "progress_photo",
    "fieldtype": "Image",
    "label": "Progress Photo",
    "options": "progress_image"
-  },
-  {
-   "default": "Now",
-   "fieldname": "metrics_entry_datetime",
-   "fieldtype": "Datetime",
-   "in_list_view": 1,
-   "label": "Date",
-   "reqd": 1
   },
   {
    "fieldname": "column_break_xuhl",
@@ -87,11 +80,19 @@
    "fieldname": "progress_image",
    "fieldtype": "Attach Image",
    "label": "Progress Image"
+  },
+  {
+   "default": "Now",
+   "fieldname": "entry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-01 15:51:35.496315",
+ "modified": "2023-08-05 19:00:08.401093",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Member Metrics",

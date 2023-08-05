@@ -23,11 +23,11 @@
   "end_date",
   "locker_number",
   "section_break_qxtm",
-  "muscle_mass",
-  "waist_circumference",
   "member_weight",
-  "daily_calorie_intake",
+  "waist_circumference",
+  "muscle_mass",
   "body_fat_percentage",
+  "daily_calorie_intake",
   "column_break_oyau",
   "progress_image",
   "progress_photo",
@@ -202,8 +202,25 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2023-08-04 13:47:19.732303",
+ "links": [
+  {
+   "link_doctype": "Gymasy Locker Booking",
+   "link_fieldname": "member_name"
+  },
+  {
+   "link_doctype": "Gymasy Trainer Subscription",
+   "link_fieldname": "member_name"
+  },
+  {
+   "link_doctype": "Gymasy Class Booking",
+   "link_fieldname": "member_name"
+  },
+  {
+   "link_doctype": "Gymasy Cardio Booking",
+   "link_fieldname": "member_name"
+  }
+ ],
+ "modified": "2023-08-05 20:50:22.835115",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gymasy Member",

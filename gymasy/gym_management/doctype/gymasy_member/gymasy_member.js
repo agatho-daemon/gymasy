@@ -3,9 +3,52 @@
 
 frappe.ui.form.on("Gymasy Member", {
 	refresh(frm) {
-        // planName = frm.get_field('membership_plan').value;
-        // console.log(planName);
-	},
+        frm.add_custom_button(
+            __('Assign Locker'), function() {
+                the_list = frappe.db.get_single_value('Gymasy Settings', 'lockers_list')
+                .then(r => {
+                    r = JSON.parse(r);
+                    lockers = Object.keys(r).filter(key => r[key] === 0)
+                    return lockers;
+                });
+                the_list.then(response => {
+                    frappe.prompt(
+                        [{
+                            'label': 'Available Lockers',
+                            'fieldname': 'locker_number',
+                            'fieldtype': 'Select',
+                            'options': response
+                        }],
+                        function(values) {
+                            frm.set_value('locker_number', values.locker_number);
+                        },
+                        'Select a Locker',
+                        'Assign'
+                    );
+                });
+            },
+            __('Actions')
+        );
+        frm.add_custom_button(
+            __('Assign A Trainer'), function() {
+                frappe.prompt(
+                    [{
+                        'label': 'Trainer Name',
+                        'fieldname': 'current_trainer',
+                        'fieldtype': 'Link',
+                        'options': 'Gymasy Trainer'
+                    }],
+                    function(values) {
+                        frm.set_value('current_trainer', values.current_trainer);
+                    },
+                    'Select a Trainer',
+                    'Assign'
+                );
+            },
+            __('Actions')
+        )
+    },
+    
     membership_plan(frm) {
         planName = frm.get_field('membership_plan').value;
         duration = frappe.db.get_value('Gymasy Membership', planName, 'membership_plan_duration')
