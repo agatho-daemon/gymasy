@@ -1,5 +1,3 @@
-frappe.require('file_uploader.bundle.js');
-
 // frappe.require('frappe-web.bundle.js').then((r) => {
 //     // console.log('frappe-web.bundle.js loaded');
 //     frappe.call({
