@@ -1,0 +1,50 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"Xb2uVoN3Oo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"RFMyePTA8I\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Members\",\"col\":3}},{\"id\":\"7EOjqLYM8w\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trainers\",\"col\":3}},{\"id\":\"px1-dcywP3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"poaN057wzX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Register New Member\",\"col\":3}},{\"id\":\"_ZhmEuvIEY\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "creation": "2023-08-06 18:08:48.488853",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "users",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Gym Management",
+ "links": [],
+ "modified": "2023-08-06 18:49:32.775526",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Members",
+   "link_to": "Gymasy Member",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Register New Member",
+   "link_to": "Gymasy Member",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Trainers",
+   "link_to": "Gymasy Trainer",
+   "type": "DocType"
+  }
+ ],
+ "title": "Gym Management"
+}
