@@ -82,8 +82,7 @@ def execute(filters=None):
 			'datasets': [
 				{
 					'name': 'Weight (Kg)',
-					'values': [record.member_weight for record in records]
-				},
+					'values': [record.member_weight for record in records]			},
 				{
 					'name': 'Waist (cm)',
 					'values': [record.waist_circumference for record in records]
@@ -99,7 +98,7 @@ def execute(filters=None):
 			]
 		},
 		'type': 'line',
-		'maxLegendPoints': 10,
+		'maxLegendPoints': 2,
 		'title': 'Member Metrics',
 		'showLegend': 1
 	}
